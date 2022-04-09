@@ -4,7 +4,7 @@
   --tertiary: #788585;
   --light-dark: #6f6866;
   --dark: #b19c96;
-  --border-radius: .3rem;
+  --border-radius: 0.3rem;
 }
 
 * {
@@ -156,7 +156,7 @@ p {
   color: var(--primary);
   background-color: var(--dark);
   padding: 2.5%;
-  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
 
 .card-body {
@@ -198,7 +198,6 @@ p {
   text-transform: uppercase;
 }
 
-
 /* FLEX CONTENT */
 .flex-row {
   display: flex;
@@ -220,7 +219,7 @@ p {
 }
 
 .justify-flex-start {
-  justify-content: flex-start
+  justify-content: flex-start;
 }
 
 .justify-flex-end {
@@ -345,7 +344,6 @@ p {
     flex: 0 0 100%;
   }
 }
-
 
 /* col-md */
 @media screen and (min-width: 768px) {
