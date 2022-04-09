@@ -1,9 +1,9 @@
 :root {
-  --primary: #cbdbd1;
+  --primary: #213028;
   --secondary: #9caea9;
   --tertiary: #788585;
   --light-dark: #6f6866;
-  --dark: #38302e;
+  --dark: #b19c96;
   --border-radius: .3rem;
 }
 
@@ -42,9 +42,9 @@ p {
   font-size: 1.2rem;
 }
 
- .btn {
+.btn {
   font-size: 1.3rem;
-  text-decoration:none;
+  text-decoration: none;
   padding: 6px 5px;
   width: 100%;
   display: block;
@@ -58,7 +58,7 @@ p {
   transform: translate(-1px, -1px);
 }
 
- .btn:hover {
+.btn:hover {
   color: var(--primary);
   background-color: var(--tertiary);
   transform: translate(0, 0);
@@ -85,7 +85,7 @@ p {
   font-size: 1.2rem;
 }
 
- .btn-back:hover {
+.btn-back:hover {
   color: var(--primary);
   background-color: var(--tertiary);
   transform: translate(0, 0);
@@ -133,7 +133,7 @@ p {
 .status-icon {
   padding: 2px 5px;
   margin: 0 5px;
-  background-color: rgba(255,255,255, 1);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: var(--border-radius);
 }
 
@@ -499,5 +499,3 @@ p {
     flex: 0 0 100%;
   }
 }
-
-

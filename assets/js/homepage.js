@@ -22,15 +22,22 @@ var formSubmitHandler = function (event) {
 // *
 // *
 // ←←← Fetch User Data →→→
-var userURL = "https://api.github.com/users/"; // Create a var to hold the user url
 var getUserRepos = function (user) {
-  var response = fetch(userURL + user + "/repos").then(function (response) {
-    response.json().then(function (data) {
-      displayRepos(data, user);
-      console.log(data); // leaving this here
+  var apiURL = "https://api.github.com/users/" + user + "/repos"; // Create a var to hold the user url
+  fetch(apiURL)
+    .then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          displayRepos(data, user);
+          console.log(data); // leaving this here
+        });
+      } else {
+        alert("Error: User doesn't exist...");
+      }
+    })
+    .catch(function (error) {
+      alert("Failed to connect to Github");
     });
-  });
-  console.log("outside");
 };
 userFormEl.addEventListener("submit", formSubmitHandler); // Calling the function
 // →→→ Fetch User Data End ←←←
@@ -39,6 +46,10 @@ userFormEl.addEventListener("submit", formSubmitHandler); // Calling the functio
 // *
 // ←←← Function to display repos →→→
 var displayRepos = function (repos, searchTerm) {
+  if (repos.length === 0) {
+    repoContainerEl.textContent = "User has no public repositories.";
+    return;
+  }
   repoSearchTerm.textContent = searchTerm;
 
   for (var i = 0; i < repos.length; i++) {
